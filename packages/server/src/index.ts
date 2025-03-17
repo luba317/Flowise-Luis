@@ -294,7 +294,7 @@ export async function start(): Promise<void> {
     serverApp = new App()
 
     const host = process.env.HOST
-    const PORT = process.env.PORT || 3000;
+    const PORT = Number (process.env.PORT || 3000;
 
     const server = http.createServer(serverApp.app)
 
