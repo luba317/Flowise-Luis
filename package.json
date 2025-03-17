@@ -11,8 +11,7 @@
         "api-documentation"
     ],
     "scripts": {
-        "build":"pnpm install --force && turbo run build"
-,
+        "build": "pnpm install --force && turbo run build",
         "build-force": "pnpm clean && turbo run build --force",
         "dev": "turbo run dev --parallel",
         "start": "run-script-os",
