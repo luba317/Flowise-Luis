@@ -300,11 +300,12 @@ export async function start(): Promise<void> {
 
     await serverApp.initDatabase()
     await serverApp.config()
+    server.listen(PORT, host, () => {
+    logger.info(`⚡️ [server]: Flowise Server is listening at ${host ? 'http://' + host : ''}:${PORT}`)
+})
 
-    server.listen(PORT, host, () => {)
-        logger.info(`⚡️ [server]: Flowise Server is listening at ${host ? 'http://' + host : ''}:${PORT}`)
-    })
-}
+
+   
 
 export function getInstance(): App | undefined {
     return serverApp
